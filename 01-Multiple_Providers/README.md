@@ -1,7 +1,7 @@
 # Multiple Provider Configuration
 Creating two resource groups in default and non-default provider
 
-## Defining two regions in the provider configuration
+## Defining two regions in the provider configuration using alias
 ```t
 # Provider-1 Block Canada_Central (Default Provider)
 provider "azurerm" {
@@ -18,4 +18,13 @@ provider "azurerm" {
   alias = "canada_east"
 }
 ```
+## How to reference non-default provider while creating resources
+```t
+# Creating a resource group in Canada East
+resource "azurerm_resource_group" "rg2_eastern" {
+  name     = "rg2_eastern"
+  location = "Canada East"
+  provider = azurerm.canada_east
+  }
+  ```
 
