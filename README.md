@@ -1,2 +1,2 @@
 # Azure-IaC-with-Terraform
-Deployment of Azure service with IaC
+Deployment of Azure services with IaC
