@@ -8,8 +8,8 @@
 
 # Azure Resources Created
 1. azurerm_virtual_network
-3. azurermazurerm_resource_group
-2. azu_subnet
+3. azurerm_resource_group
+2. azurerm_subnet
 4. azurerm_network_security_group
 5. azurerm_subnet_network_security_group_association
 6. azurerm_network_security_rule
