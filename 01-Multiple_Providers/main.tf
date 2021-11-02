@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "rg1_central" {
   location = "Canada Central"
 }
 
-# Creating a resource group in Canada East
+# Create a resource group in Canada East
 resource "azurerm_resource_group" "rg2_eastern" {
   name     = "rg2_eastern"
   location = "Canada East"
