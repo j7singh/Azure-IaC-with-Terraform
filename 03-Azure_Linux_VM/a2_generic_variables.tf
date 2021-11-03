@@ -23,5 +23,5 @@ variable "resource_group_name" {
 variable "resource_group_location" {
   description = "Resource Group Location"
   type        = string
-  default     = "Canada East"
+  default     = "Canada Central"
 }

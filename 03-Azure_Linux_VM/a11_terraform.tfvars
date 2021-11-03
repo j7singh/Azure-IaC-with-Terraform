@@ -1,7 +1,7 @@
 org_division            = "Marketing"
 environment             = "dev"
 resource_group_name     = "rg"
-resource_group_location = "Canada East"
+resource_group_location = "Canada Central"
 
 
 
