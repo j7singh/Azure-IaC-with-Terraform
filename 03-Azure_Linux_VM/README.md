@@ -29,4 +29,8 @@ Private Key: terraform-azure.pem
 
 # Permissions for Pem file
 chmod 400 terraform-azure.pem
+
+# To check the log of the webserver
+cd /var/log
+tail -100f cloud-init-output.log
 ```
