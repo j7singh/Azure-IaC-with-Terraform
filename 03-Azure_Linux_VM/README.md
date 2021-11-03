@@ -1,15 +1,32 @@
-# Azure Virtual Network Design
-- These configuration files will create 4-Tier Azure Virtual Network 
-1. Azure Virtual Network
-2. WebTier Subnet + WebTier Network Security Group (Ports 80, 443)
-3. AppTier Subnet + AppTier Network Security Group (Ports 8080, 80, 443)
-4. DBTier Subnet + DBTier Network Security Group  (Ports 3306, 1433, 5432, 27017)
-5. Bastion Subnet + Bastion Network Security Group (Ports 80, 3389)
+# Create Azure Linux VM using Terraform as IaC
 
-# Azure Resources Created
-1. azurerm_virtual_network
-3. azurerm_resource_group
-2. azurerm_subnet
-4. azurerm_network_security_group
-5. azurerm_subnet_network_security_group_association
+## Resources Created 
+1. azurerm_public_ip
+2. azurerm_network_interface
+3. azurerm_network_security_group
+4. azurerm_network_interface_security_group_association
+5. Terraform Local Block for Security Rule Ports
 6. azurerm_network_security_rule
+7. Terraform Local Block for defining custom data to Azure Linux Virtual Machine
+8. azurerm_linux_virtual_machine
+9. Terraform Outputs for above listed Azured Resources 
+
+### Resources will be created from 02-Virtual_Network as well
+### Pre-requisite : Create SSH Keys for Azure Linux VM
+```t
+# Create Folder
+mkdir ssh-keys
+
+# Create SSH Key
+cd ssh-ekys
+ssh-keygen \
+    -C "azureuser@myserver" \
+    -f terraform-azure.pem 
+
+
+Public Key: terraform-azure.pem.pub -> move to terraform-azure.pub
+Private Key: terraform-azure.pem
+
+# Permissions for Pem file
+chmod 400 terraform-azure.pem
+```
