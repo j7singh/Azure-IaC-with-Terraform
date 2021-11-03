@@ -30,4 +30,4 @@ override.tf.json
 
 #Ignore private key
 *.pem
-terraform_azure.pem
+*.pub
